@@ -41,7 +41,7 @@ runs:
   steps:
     - uses: ./attest-build-provenance/generate-build-provenance-predicate
       id: generate-build-provenance-predicate
-    - uses: actions/attest@main
+    - uses: bdehamer/attest@main
       id: attest
       with:
         github-token: ${{ inputs.github-token }}
