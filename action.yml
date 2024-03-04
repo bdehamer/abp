@@ -42,8 +42,9 @@ runs:
     - name: node
       shell: bash
       run: node --version
-    - uses: ./attest-build-provenance/generate-build-provenance-predicate
-      id: generate-build-provenance-predicate
+    - name: script
+      shell: bash
+      run: node ./dist/index.js
     - uses: bdehamer/attest@main
       id: attest
       with:
