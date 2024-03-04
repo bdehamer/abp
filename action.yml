@@ -43,6 +43,7 @@ runs:
       shell: bash
       run: node --version
     - name: script
+      id: generate-build-provenance-predicate
       shell: bash
       run: node ${{ github.action_path }}/dist/index.js
     - uses: bdehamer/attest@main
